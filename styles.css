@@ -1,0 +1,132 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+.keyboard {
+  width: 900px; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #d1d5db;
+  padding: 20px;
+  border-radius: 10px;
+
+}
+
+.numpad {
+  width: 240px; 
+  height: 376.200px; 
+  background-color: #d1d5db; 
+  border-radius: 10px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: -10px;
+
+}
+
+
+.row {
+  display: grid;
+  gap: 10px;
+}
+
+.row-1 {
+  grid-template-columns: repeat(15, 1fr);
+}
+
+.row-2 {
+  grid-template-columns: 0.8fr repeat(12, 1fr) 2fr;
+}
+
+.row-3 {
+  grid-template-columns: 1.5fr repeat(12, 1fr) 2fr;
+}
+
+.row-4 {
+  grid-template-columns: 2fr repeat(11, 1fr) 2.5fr;
+}
+
+.row-5 {
+  grid-template-columns: 2.5fr repeat(10, 1fr) 2.5fr;
+}
+
+.row-6 {
+  grid-template-columns: 1fr 1fr 1fr  1fr 6fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.row-7{
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.key {
+  height: 50px;
+  grid-column: span 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.tall-key {
+  grid-row: span 2;
+  height: 108px;
+
+}
+
+.big-key {
+  grid-column: span 2;
+
+}
+
+.half-key {
+  height: 25px;
+}
+
+.key:hover {
+  background-color: #f3f4f6;
+  transform: translateY(-2px);
+}
+
+.key:active {
+  background-color: #e5e7eb;
+  transform: translateY(0);
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.wide {
+  grid-column: span 2; 
+}
+
+.extra-wide {
+  grid-column: span 6; 
+}
+
+.spacer {
+  grid-column: span 0.5; 
+  background-color: transparent;
+}
